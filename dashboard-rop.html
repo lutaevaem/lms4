@@ -156,5 +156,27 @@
 
 
 
+
+<script>
+(function(){
+  function restore(el){
+    var k = el.getAttribute('data-key');
+    if(!k) return;
+    var v = localStorage.getItem(k);
+    if(v!==null) el.innerHTML = v;
+  }
+  function bind(el){
+    var k = el.getAttribute('data-key');
+    if(!k) return;
+    el.addEventListener('input', function(){
+      localStorage.setItem(k, el.innerHTML);
+    });
+  }
+  document.querySelectorAll('[contenteditable][data-key]').forEach(function(el){
+    restore(el); bind(el);
+  });
+})();
+</script>
+
 </body>
 </html>
