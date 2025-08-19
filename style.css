@@ -349,3 +349,45 @@ body{margin:0}
 .dash-grid,.board,.dashboard{max-width:1200px;margin:0 auto;width:100%;overflow:visible}
 /* Remove any accidental overlay panels */
 #sectionsPanel, #pageSearch{display:none!important}
+
+
+/* === Brand & Header UI Refresh === */
+.site-header{position:sticky;top:0;z-index:4000;background:linear-gradient(180deg,#f8fafc,#ffffff)}
+.site-header .brand{display:flex;align-items:center;gap:.5rem;padding:6px 10px}
+.brand-link{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.brand-mark{border-radius:12px;box-shadow:0 2px 6px rgba(2,6,23,.12)}
+.brand-name{font-weight:700;letter-spacing:.2px;background:linear-gradient(90deg,#0f172a,#334155);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:15px;line-height:1}
+@media (max-width:520px){.brand-name{display:none}}
+
+/* Icon header: compact icons + captions with snap scrolling */
+.icon-nav{display:flex;gap:.5rem;align-items:center;flex-wrap:nowrap;overflow-x:auto;padding:8px 10px;border-top:1px solid rgba(2,6,23,.05);border-bottom:1px solid rgba(2,6,23,.06);scroll-snap-type:x mandatory}
+.icon-nav .icon-link{scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;min-width:56px;text-decoration:none;padding:4px 6px;border-radius:10px}
+.icon-nav .icon-link .i{font-size:20px;line-height:20px}
+.icon-nav .icon-link .t{font-size:11px;color:#0f172a;line-height:12px;margin-top:2px;white-space:nowrap}
+.icon-nav .icon-link:focus,.icon-nav .icon-link:hover{background:#f1f5f9;outline:2px solid rgba(15,23,42,.15);outline-offset:2px}
+
+/* === Readability & Components === */
+:root{--container:1160px;--shadow:0 2px 14px rgba(2,6,23,.06);--radius:14px}
+.article{max-width:var(--container);margin:0 auto;padding:16px}
+.panel,.card{background:linear-gradient(180deg,#ffffff,#f8fafc);border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;margin:10px 0}
+.card h3,.panel h3{margin-top:0.2rem}
+.btn{display:inline-flex;gap:.4rem;align-items:center;padding:.55rem .9rem;border-radius:10px;border:1px solid rgba(2,6,23,.12);text-decoration:none}
+.btn.primary{background:#0ea5e9;border-color:#0ea5e9;color:#fff}
+.btn.ghost{background:#fff;color:#0f172a}
+.btn:hover{filter:brightness(.96)}
+.table{width:100%;border-collapse:separate;border-spacing:0}
+.table th,.table td{padding:.6rem .7rem;border-bottom:1px solid rgba(2,6,23,.06)}
+.table tr:nth-child(odd){background:#fbfdff}
+.table th{background:#f1f5f9;text-align:left}
+
+/* Collapsed TOC summary */
+.static-toc{max-width:var(--container);margin:6px auto;padding:0 16px}
+.static-toc details{background:linear-gradient(180deg,#ffffff,#f7fbff);border:1px solid rgba(2,6,23,.06);border-radius:12px;padding:6px 10px}
+.static-toc summary{cursor:pointer;font-weight:600;list-style:none}
+.static-toc summary::after{content:"▸";display:inline-block;margin-left:.35rem;transform:translateY(-1px)}
+.static-toc details[open] summary::after{content:"▾"}
+.static-toc .toc-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+/* Layout spacing under fixed header */
+.page-main{padding-top:92px;min-height:calc(100vh - 100px)}
+.dash-grid,.board,.dashboard{max-width:var(--container);margin:0 auto;width:100%;overflow:visible}
