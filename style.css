@@ -310,3 +310,19 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, input:focu
 #sectionsPanel[hidden], .page-search[hidden] { display:none !important; }
 .sections-panel.open { display:block; position:fixed; left:0; right:0; top:64px; z-index:3100; }
 .icon-nav a { pointer-events:auto; }
+
+
+/* Icon header: ensure clickability and small captions */
+.icon-nav{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;position:relative;z-index:3200;overflow-x:auto;padding:6px 8px}
+.icon-nav .icon-link{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:48px;text-decoration:none}
+.icon-nav .icon-link .i{font-size:20px;line-height:20px}
+.icon-nav .icon-link .t{font-size:11px;line-height:12px;margin-top:2px;white-space:nowrap;color:#0f172a}
+.icon-nav .icon-link:focus,.icon-nav .icon-link:hover{outline:2px solid rgba(15,23,42,.2);outline-offset:2px;border-radius:8px}
+/* Panels hidden must not overlay */
+#sectionsPanel[hidden], #pageSearch[hidden]{display:none!important}
+.sections-panel.open{display:block;position:fixed;left:0;right:0;top:64px;z-index:3100}
+/* Main spacing under fixed header */
+.page-main{padding-top:72px}
+/* Prevent truncation on dashboards */
+.board, .dashboard, .dash-grid{max-width:1200px;width:100%;overflow:visible}
+.content-wrap{overflow:visible}
