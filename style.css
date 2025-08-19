@@ -329,3 +329,23 @@ body{margin:0}
 .page-main{min-height:calc(100vh - 96px)}
 .dash-grid,.board,.dashboard{max-width:1200px;margin:0 auto;width:100%;overflow:visible}
 .card,[contenteditable]{min-height:1.6em}
+
+
+/* Collapsed site TOC by default */
+.static-toc details{background:linear-gradient(180deg,#ffffff,#f7fbff);border:1px solid rgba(2,6,23,.06);border-radius:12px;padding:6px 10px}
+.static-toc summary{cursor:pointer;font-weight:600}
+.static-toc summary::marker{content:""}
+.static-toc summary::after{content:"▸";display:inline-block;margin-left:.35rem;transform:translateY(-1px)}
+.static-toc details[open] summary::after{content:"▾"}
+/* Header and icon bar */
+.site-header{position:sticky;top:0;z-index:4000;background:linear-gradient(180deg,#f8fafc,#ffffff)}
+.icon-nav{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;overflow-x:auto;padding:8px 10px;border-bottom:1px solid rgba(2,6,23,.06)}
+.icon-nav .icon-link{display:flex;flex-direction:column;align-items:center;min-width:56px;text-decoration:none}
+.icon-nav .icon-link .i{font-size:20px;line-height:20px}
+.icon-nav .icon-link .t{font-size:11px;color:#0f172a;line-height:12px;margin-top:2px;white-space:nowrap}
+.icon-nav .icon-link:hover,.icon-nav .icon-link:focus{outline:2px solid rgba(15,23,42,.15);outline-offset:2px;border-radius:8px}
+/* Layout */
+.page-main{padding-top:88px;min-height:calc(100vh - 96px)}
+.dash-grid,.board,.dashboard{max-width:1200px;margin:0 auto;width:100%;overflow:visible}
+/* Remove any accidental overlay panels */
+#sectionsPanel, #pageSearch{display:none!important}

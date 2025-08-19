@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Дашборд РОП — Софт Альянс</title>
+  <title>Культура и правила — Софт Альянс</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +23,6 @@
 
 </div>
 </header>
-
 <section class="toc static-toc">
   <details>
     <summary>Навигация по сайту</summary>
@@ -80,81 +79,72 @@
     </div>
   </details>
 </section>
+<main class="page-main" class="page-main article">
 
-<div id="sectionsPanel" class="sections-panel" hidden>
-    <div class="panel-inner">
-      <div class="panel-head">
-        <strong>Все разделы</strong>
-        <input type="search" id="sectionsSearch" placeholder="Быстрый фильтр по названию…">
-        <button id="sectionsClose" class="iconbtn" aria-label="Закрыть"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg></button>
-      </div>
-<main class="page-main" style="padding-top:88px" class="page-main article">
+<h1>Культура и правила команды</h1>
+<p class="lead">Коротко о том, как мы работаем в <strong>Софт Альянс</strong>: просто, уважительно и результативно. Ниже — только то, что помогает МОП и РОП быстрее достигать целей клиентов и компании.</p>
 
-<h1>Дашборд РОП: воронка и команда</h1>
-
-<section class="card">
-  <h2>Ключевые блоки</h2>
+<section class="panel">
+  <h2>Наши принципы</h2>
   <ul>
-    <li><strong>Воронка:</strong> контакты → потребности → КП → переговоры → закрытие.</li>
-    <li><strong>Активность сотрудников:</strong> звонки/КП/приценки по каждому.</li>
-    <li><strong>Прогноз:</strong> сумма по вероятностям (commit/best case).</li>
-    <li><strong>Риски:</strong> сделки без движения, просроченные задачи.</li>
-    <li><strong>Наставничество:</strong> планы развития, прогресс обучения.</li>
+    <li><strong>Клиент сначала:</strong> в каждом действии ищем пользу для клиента и прозрачность условий.</li>
+    <li><strong>Честность и ответственность:</strong> договорились — делаем; не успеваем — заранее предупреждаем и даём план.</li>
+    <li><strong>Простые решения:</strong> минимизируем бюрократию, автоматизируем рутину, фиксируем в CRM.</li>
+    <li><strong>Уважение и безопасность:</strong> нулевая толерантность к токсичности и дискриминации; соблюдаем ИБ и PDN.</li>
   </ul>
 </section>
 
 <section class="panel">
-  <h2>Еженедельный цикл</h2>
-  <ol>
-    <li>Пн: постановка целей и план команды.</li>
-    <li>Ср: снятие блокеров, корректировка фокуса.</li>
-    <li>Пт: разбор воронки и ретроспектива.</li>
-  </ol>
-</section>
-
-<section class="note">
-  <h2>Качество данных</h2>
+  <h2>Рабочие договорённости</h2>
   <ul>
-    <li>Без задач в CRM — нет сделки.</li>
-    <li>КП без следующего шага — красная зона.</li>
-    <li>Причины проигрышей фиксируются обязательно.</li>
+    <li><strong>Коммуникации:</strong> основные — в CRM/почте; мессенджеры — для оперативных уточнений (итог — в CRM).</li>
+    <li><strong>План‑факт:</strong> цели на день/неделю в дашборде, итог дня — короткий чекпоинт.</li>
+    <li><strong>Эскалация:</strong> риск/проблема → сразу РОП, без «скроется само».</li>
+    <li><strong>Встречи:</strong> стендап 10–15 мин; ретро — раз в 2 недели, конкретные улучшения в работу.</li>
   </ul>
 </section>
 
+<section class="panel">
+  <h2>Стандарты качества</h2>
+  <ul>
+    <li><strong>CRM‑след:</strong> каждое касание отражено (звонок, письмо, КП, след. шаг).</li>
+    <li><strong>Документы:</strong> шаблоны Софт Альянс; орфография; версии — с датой и ответственным.</li>
+    <li><strong>Тендеры:</strong> чек‑лист заявки и матрица рисков обязательны перед подачей.</li>
+    <li><strong>IB &amp; PDN:</strong> пароли — менеджеры не хранят в явном виде; доступы — по роли; пересылка данных — только защищёнными каналами.</li>
+  </ul>
+</section>
 
-<section class="card">
-  <h2>План обзоров и заметки РОП (сохраняется в браузере)</h2>
-  <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
-    <div class="box">
-      <h3>Понедельник — цели</h3>
-      <div contenteditable="true" data-group="rop" data-key="rop_mon_goals" class="editable" style="min-height:5rem"></div>
-    </div>
-    <div class="box">
-      <h3>Среда — блокеры</h3>
-      <div contenteditable="true" data-group="rop" data-key="rop_wed_blockers" class="editable" style="min-height:5rem"></div>
-    </div>
-    <div class="box" style="grid-column:1 / -1">
-      <h3>Пятница — разбор воронки</h3>
-      <div contenteditable="true" data-group="rop" data-key="rop_fri_pipeline" class="editable" style="min-height:6rem"></div>
-      <button type="button" data-clear-group="rop">Очистить заметки</button>
-    </div>
-  </div>
-  <div class="panel">
-    <h3>Риски/эскалации</h3>
-    <ul contenteditable="true" data-group="rop" data-key="rop_risks" class="editable">
-      <li>Сделки без движения &gt; 7 дней — проверить next step</li>
-    </ul>
-  </div>
-  <p class="tip">Сохранение локально, без вычислений и отправки.</p>
+<section class="panel">
+  <h2>Роли и взаимодействие</h2>
+  <ul>
+    <li><strong>МОП:</strong> план звонков/приценок, квалификация, предложения, сопровождение сделки.</li>
+    <li><strong>РОП:</strong> планирование и воронка, коучинг, снятие блокеров, финализация условий.</li>
+    <li><strong>Поддержка:</strong> пресейл/тендерное сопровождение — по чек‑листу, SLA и назначенным ответственным.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>Обратная связь и рост</h2>
+  <ul>
+    <li><strong>1‑на‑1:</strong> короткие регулярные встречи РОП–МОП: фокус, преграды, развитие.</li>
+    <li><strong>Обучение:</strong> «Книга новичка», Навигатор, библиотека скриптов, мини‑кейсы раз в неделю.</li>
+    <li><strong>Карьерные шаги:</strong> понятные критерии перехода на следующий уровень (план/факт, качество CRM, клиентский NPS).</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>Этика и инклюзивность</h2>
+  <ul>
+    <li>Уважительная речь, равные возможности, ноль токсичности и буллинга.</li>
+    <li>Конфликты решаем открыто, по фактам; обсуждаем поведение, а не личности.</li>
+  </ul>
+</section>
+
+<section class="panel">
+  <h2>Если сомневаешься</h2>
+  <p>Спроси РОП или старшего коллегу. Лучше уточнить и сделать правильно, чем исправлять последствия. Мы за скорость, но не ценой качества и безопасности.</p>
 </section>
 
 </main>
-
-
-
-
-
-
-
 </body>
 </html>
